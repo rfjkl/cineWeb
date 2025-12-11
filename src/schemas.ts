@@ -19,3 +19,12 @@ export const SessaoSchema = z.object({
   salaId: z.number().int(),
   dataHora: z.string().refine((d)=>!Number.isNaN(Date.parse(d)), { message: 'Data/Hora inválida' }).refine((d)=> new Date(d) >= new Date(new Date().toISOString().slice(0,16)), { message: 'Sessão não pode ser retroativa' })
 })
+
+export const LancheSchema = z.object({
+  nome: z.string().min(1, 'Nome obrigatório'),
+  preco: z.number().positive('Preço inválido')
+})
+
+export const PedidoSchema = z.object({
+  data: z.string()
+})

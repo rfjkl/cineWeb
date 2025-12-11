@@ -8,6 +8,12 @@ import SalaForm from './pages/SalaForm'
 import SessoesList from './pages/SessoesList'
 import SessaoForm from './pages/SessaoForm'
 import VendaIngresso from './pages/VendaIngresso'
+import LanchesList from './pages/LancheList'
+import LancheForm from './pages/LancheForm'
+import PedidosList from './pages/PedidosList'
+import PedidoDetalhes from './pages/PedidoDetalhes'
+import ClientePedido from "./pages/ClientePedido"
+
 
 export default function App(){
   return (
@@ -26,6 +32,15 @@ export default function App(){
         <Route path="/sessoes/novo" element={<SessaoForm />} />
         <Route path="/sessoes/editar/:id" element={<SessaoForm />} />
         <Route path="/sessoes/vender/:id" element={<VendaIngresso />} />
+
+        <Route path="/lanches" element={<LanchesList />} />
+        <Route path="/lanches/novo" element={<LancheForm />} />
+        <Route path="/lanches/editar/:id" element={<LancheForm />} />
+
+        <Route path="/pedidos" element={<PedidosList />} />
+        <Route path="/pedidos/:id" element={<PedidoDetalhes />} />
+        <Route path="/cliente/pedido" element={<ClientePedido />} />
+
       </Routes>
     </Layout>
   )

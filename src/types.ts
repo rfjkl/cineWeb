@@ -27,3 +27,22 @@ export type Ingresso = {
   tipo: 'Inteira' | 'Meia'
   valor: number
 }
+
+export type Lanche = {
+  id?: number
+  nome: string
+  preco: number
+}
+
+export type ItemPedido = {
+  id?: number
+  pedidoId: number
+  tipo: 'ingresso' | 'lanche'
+  referenciaId: number
+  quantidade: number
+}
+
+export type Pedido = {
+  id?: number
+  data: string
+}

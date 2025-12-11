@@ -66,7 +66,7 @@ export default function FilmeForm(){
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Datas de exibição (YYYY-MM-DD, separadas por vírgula)</label>
+          <label className="form-label">Data de lançamento (YYYY-MM-DD)</label>
           <input className={`form-control ${errors.datasExibicao ? 'is-invalid' : ''}`} value={form.datasExibicao.join(',')} onChange={e=>setField('datasExibicao', e.target.value.split(',').map(s=>s.trim()).filter(Boolean))} />
           {errors.datasExibicao && <div className="invalid-feedback">{errors.datasExibicao}</div>}
         </div>
