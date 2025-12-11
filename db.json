@@ -1,0 +1,13 @@
+{
+  "filmes": [],
+  "salas": [],
+  "sessoes": [],
+  "ingressos": [
+    {
+      "sessaoId": 1,
+      "tipo": "Meia",
+      "valor": 10,
+      "id": 1
+    }
+  ]
+}
